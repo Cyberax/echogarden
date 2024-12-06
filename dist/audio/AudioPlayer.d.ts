@@ -1,0 +1,11 @@
+import { RawAudio } from './AudioUtilities.js';
+import { Timeline } from '../utilities/Timeline.js';
+import { SignalChannel } from '../utilities/SignalChannel.js';
+export declare function playAudioFileWithTimelineFile(audioFilename: string, timelineFileName: string, transcriptFileName?: string, player?: AudioPlayerID): Promise<void>;
+export declare function playAudioWithWordTimeline(rawAudio: RawAudio, wordTimeline: Timeline, transcript?: string, player?: AudioPlayerID): Promise<void>;
+export declare function playAudioSamplesWithKeyboardControls(rawAudio: RawAudio, player?: AudioPlayerID): Promise<void>;
+export declare function playAudioSamples(rawAudio: RawAudio, onTimePosition?: (timePosition: number) => void, signalChannel?: SignalChannel, player?: AudioPlayerID): Promise<void>;
+export declare function playAudioSamples_AudioIO(rawAudio: RawAudio, onTimePosition?: (timePosition: number) => void, signalChannel?: SignalChannel): Promise<void>;
+export declare function playAudioSamples_Sox(rawAudio: RawAudio, onTimePosition?: (timePosition: number) => void, signalChannel?: SignalChannel, microFadeInOut?: boolean): Promise<void>;
+export declare const charactersToWriteAhead: string[];
+export type AudioPlayerID = 'audio-io' | 'sox';

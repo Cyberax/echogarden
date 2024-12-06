@@ -1,0 +1,12 @@
+import * as NodePath from 'node:path';
+export declare function getModuleRootDir(): string;
+export declare function resolveToModuleRootDir(relativePath: string): string;
+export declare function getLowercaseFileExtension(filename: string): string;
+export declare function getAppTempDir(appName: string): string;
+export declare function joinPath(...paths: string[]): string;
+export declare function resolvePath(...paths: string[]): string;
+export declare function normalizePath(path: string): string;
+export declare function getBaseName(path: string): string;
+export declare function getDirName(path: string): string;
+export declare function getFileNameWithoutExtension(filePath: string): string;
+export declare function parsePath(path: string): NodePath.ParsedPath;

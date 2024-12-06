@@ -1,0 +1,23 @@
+import { RawAudio } from '../audio/AudioUtilities.js';
+export declare function computeMFCCs(monoAudio: RawAudio, options?: MfccOptions): Promise<Float32Array<ArrayBuffer>[]>;
+export declare function melSpectogramToMFCCs(melSpectogram: ArrayLike<number>[], mfccFeatureCount: number): Float32Array<ArrayBuffer>[];
+export declare function melSpectrumToMFCC(melSpectrum: ArrayLike<number>, mfccFeatureCount: number, dctMatrix: ArrayLike<number>[], normalization?: 'none' | 'orthonormal'): Float32Array<ArrayBuffer>;
+export declare function createDCTType2CoefficientMatrix(mfccFeatureCount: number, melBandCount: number): Float32Array<ArrayBufferLike>[];
+export declare function applyEmphasis(samples: ArrayLike<number>, emphasisFactor?: number, initialState?: number): Float32Array<ArrayBuffer>;
+export declare function applyLiftering(mfccs: ArrayLike<number>[], lifteringFactor: number): Float32Array<ArrayBufferLike>[];
+export type MfccOptions = {
+    filterbankCount?: number;
+    featureCount?: number;
+    fftOrder?: number;
+    lowerFreq?: number;
+    upperFreq?: number;
+    windowDuration?: number;
+    hopDuration?: number;
+    emphasisFactor?: number;
+    analysisSampleRate?: number;
+    lifteringFactor?: number;
+    normalize?: boolean;
+    zeroFirstCoefficient?: boolean;
+};
+export declare const defaultMfccOptions: MfccOptions;
+export declare function extendDefaultMfccOptions(options: MfccOptions): any;

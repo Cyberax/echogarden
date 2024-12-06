@@ -1,0 +1,14 @@
+export declare function int8ToBuffer(int8s: Int8Array): Uint8Array<ArrayBufferLike>;
+export declare function bufferToInt8(buffer: Uint8Array): Int8Array<ArrayBufferLike>;
+export declare function int16ToBufferLE(int16s: Int16Array): Uint8Array<ArrayBufferLike>;
+export declare function bufferLEToInt16(buffer: Uint8Array): Int16Array<ArrayBufferLike>;
+export declare function int24ToBufferLE(int24s: Int32Array): Uint8Array<ArrayBuffer>;
+export declare function bufferLEToInt24(buffer: Uint8Array): Int32Array<ArrayBuffer>;
+export declare function int32ToBufferLE(int32s: Int32Array): Uint8Array<ArrayBufferLike>;
+export declare function bufferLEToInt32(buffer: Uint8Array): Int32Array<ArrayBufferLike>;
+export declare function float32ToBufferLE(float32s: Float32Array): Uint8Array<ArrayBufferLike>;
+export declare function bufferLEToFloat32(buffer: Uint8Array): Float32Array<ArrayBufferLike>;
+export declare function float64ToBufferLE(float64s: Float64Array): Uint8Array<ArrayBufferLike>;
+export declare function bufferLEToFloat64(buffer: Uint8Array): Float64Array<ArrayBufferLike>;
+export declare function float64Tofloat32(float64s: Float64Array): Float32Array<ArrayBuffer>;
+export declare function float32Tofloat64(float32s: Float32Array): Float64Array<ArrayBuffer>;
